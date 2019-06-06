@@ -5,3 +5,15 @@ h1{
 .mainWrapper{
     margin: 25px;
 }
+
+body {
+    background-color: #222333;
+    color: #AACCFF;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 5px;
+    /* if want drag add this  */
+    -webkit-app-region: drag;
+  }
+  
