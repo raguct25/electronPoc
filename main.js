@@ -1,4 +1,4 @@
-const {app, BrowserWindow} = require('electron')
+const {app, BrowserWindow} = require('electron');
 
 let indexWindow;
 
@@ -12,7 +12,7 @@ function createWindow () {
     },
   })
 
-  indexWindow.loadFile('index.html')
+  indexWindow.loadFile('./Crud/crud.html');
 
   // Open the DevTools.
 //   indexWindow.webContents.openDevTools();
