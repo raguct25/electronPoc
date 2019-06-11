@@ -6,11 +6,12 @@ let indexWindow, dimWindow, frameLess, parentWindow, childWindow;
 function createWindow(){
   
     indexWindow = new BrowserWindow({
-    width: 800,
-    height: 800,
+    width: 1400,
+    height: 700,
     webPreferences: {
       nodeIntegration: true
-    }
+    },
+    // frame: false,
   })
 
   // dimWindow = new BrowserWindow({
@@ -30,7 +31,7 @@ function createWindow(){
   //   childWindow.once('ready-to-show', ()=>{
   //   childWindow.show()
   // })
-    indexWindow.loadFile('./Wifi/wifi.html');
+    indexWindow.loadFile('./Design/design.1.html');
 }
 
 // function createWindow () {
