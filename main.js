@@ -4,7 +4,15 @@ let indexWindow, dimWindow, frameLess, parentWindow, childWindow;
 
 //brwoser window
 function createWindow(){
-  // indexWindow = new BrowserWindow();
+  
+    indexWindow = new BrowserWindow({
+    width: 800,
+    height: 800,
+    webPreferences: {
+      nodeIntegration: true
+    }
+  })
+
   // dimWindow = new BrowserWindow({
   //   width: 400,
   //   height: 400,
@@ -14,14 +22,15 @@ function createWindow(){
   // })
   // frameLess = new BrowserWindow({width:200, height:300, frame: false, backgroundColor:'#800000'});
     
-  parentWindow = new BrowserWindow({title: "Parent"});
-  childWindow = new BrowserWindow({show: false , parent: parentWindow, title:'Child', modal:true});
+  // parentWindow = new BrowserWindow({title: "Parent"});
+  // childWindow = new BrowserWindow({show: false , parent: parentWindow, title:'Child', modal:true});
 
-  childWindow.loadURL('https://www.cricbuzz.com/');
+  // childWindow.loadURL('https://www.cricbuzz.com/');
 
-    childWindow.once('ready-to-show', ()=>{
-    childWindow.show()
-  })
+  //   childWindow.once('ready-to-show', ()=>{
+  //   childWindow.show()
+  // })
+    indexWindow.loadFile('./Wifi/wifi.html');
 }
 
 // function createWindow () {
