@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Photon-Design</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../photon.css">   
+    <style>
+        table, th, td {
+          border: 1px solid black;
+        }
+        </style>
+  </head>
+  <body>
+    <div class="window">
+
+      <!-- .toolbar-header sits at the top of your app -->
+      <header class="toolbar toolbar-header">
+        <h1 class="title">Wifi connection POC</h1>
+      </header>
+      <div class="window-content">          
+        <div class="toolbar-actions">          
+          <button class="btn btn-large btn-positive" type="button" id="scanButton">
+             Scan Wifi
+          </button>
+          <button class="btn btn-large btn-positive" type="button" id="fetchButton">
+              Fetch Wifi
+           </button>
+           <button class="btn btn-large btn-positive" type="button" id="connectButton">
+             Wifi Connect
+           </button>
+           <button class="btn btn-large btn-positive" type="button" id="deleteButton">
+              Wifi remove
+            </button>
+          <h4>Scanned Wifi</h4>
+          <div id= "scanWifi"></div><br><br>
+          <h4>Connected Wifi</h4>
+          <div id= "fetchWifi"></div>      
+        </div>         
+      </div>
+
+      <footer class="toolbar toolbar-footer">
+        <h1 class="title">Footer</h1>
+      </footer>
+    </div>
+    <script>
+      require('./design.js')
+  </script>
+  </body>
+</html>
