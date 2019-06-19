@@ -10,6 +10,7 @@
     "electron": "^5.0.2"
   },
   "devDependencies": {
+    "net": "^1.0.2",
     "node-wifi": "^2.0.5",
     "request": "^2.88.0",
     "wifi-control": "^2.0.1"

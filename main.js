@@ -6,8 +6,8 @@ let indexWindow, dimWindow, frameLess, parentWindow, childWindow;
 function createWindow(){
   
     indexWindow = new BrowserWindow({
-    width: 1400,
-    height: 700,
+    width: 800,
+    height: 600,
     webPreferences: {
       nodeIntegration: true
     },
@@ -31,7 +31,7 @@ function createWindow(){
   //   childWindow.once('ready-to-show', ()=>{
   //   childWindow.show()
   // })
-    indexWindow.loadFile('./Design/design.1.html');
+    indexWindow.loadFile('./Design/design.2.html');
 }
 
 // function createWindow () {
