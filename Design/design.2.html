@@ -3,60 +3,79 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Bars example</title>
+    <title>Salzer - Wifi </title>
 
     <!-- Photon.css -->
-    <link rel="stylesheet" href="../photon.css">
- 
+    <link rel="stylesheet" href="../photon//css/photon.css">
+    <link rel="stylesheet" href="../photon//css/photon.min.css">
+    <!-- <link rel="stylesheet" href="../styles.css"></link> -->
+    <style>
+        table, th, td {
+          border: 1px solid black;
+        }
+        </style>
   </head>
   <body>
     <div class="window">
-      <header class="toolbar toolbar-header">
-        <h1 class="title">Header with actions</h1>
-
-        <div class="toolbar-actions">
-          <div class="btn-group">
-            <button class="btn btn-default" type="button">
-              <span class="icon icon-home"></span>
-            </button>
-            <button class="btn btn-default" type="button">
-              <span class="icon icon-folder"></span>
-            </button>
-            <button class="btn btn-default active" type="button">
-              <span class="icon icon-cloud"></span>
-            </button>
-            <button class="btn btn-default" type="button">
-              <span class="icon icon-popup"></span>
-            </button>
-            <button class="btn btn-default" type="button">
-              <span class="icon icon-shuffle"></span>
-            </button>
-          </div>
-
-          <button class="btn btn-default" type="button">
-            <span class="icon icon-home icon-text"></span>
-            Filters
-          </button>
-
-          <button class="btn btn-default btn-dropdown pull-right" type="button">
-            <span class="icon icon-megaphone"></span>
-          </button>
-        </div>
-      </header>
-
-      <div class="window-content"></div>
-
-      <footer class="toolbar toolbar-footer">
-        <div class="toolbar-actions">
-          <button class="btn btn-default" type="button">
-            Cancel
-          </button>
-
-          <button class="btn btn-primary pull-right" type="button">
-            Save
-          </button>
-        </div>
-      </footer>
+        <div class="window-content">
+            <div class="pane-group">
+              <div class="pane">
+                <div style="margin: 2%">
+                  <form>
+                      <div class="from-group">
+                          <label>Enter SSID</label>
+                          <input id="ssidName" type="text" class="form-control">
+                      </div>
+                      <div class="from-group">
+                          <label>Enter SSID password</label>
+                          <input id="ssidPassword" type="password" class="form-control">
+                      </div>
+                      <div style="margin: 2%">
+                        <center>
+                      <button class="btn btn-large btn-positive" type="button" id="connectButton">
+                          Connect
+                        </button>
+                      </center>
+                      </div>
+                  </form>
+                </div>
+                <div style="margin: 2%">
+                    <form>
+                        <div class="from-group">
+                            <label>Connected SSID</label>
+                            <input id="ssidNames" type="text" class="form-control" disabled>
+                        </div>
+                       
+                        <div style="margin: 2%">
+                          <center>
+                            <button class="btn btn-large btn-positive" type="button" id="deleteButton">
+                                  Connection Remove
+                            </button>
+                        </div>
+                    </form>
+                  </div>
+                  <div class="toolbar-actions">          
+                      <button class="btn btn-large btn-positive" type="button" id="scanButton">
+                         Scan Wifi
+                      </button>
+                      <button class="btn btn-large btn-positive" type="button" id="fetchButton">
+                          Fetch Wifi
+                       </button>                       
+                     
+                        <button class="btn btn-large btn-positive" type="button" id="tcpButton">
+                          TCP
+                        </button>
+                      <h4>Scanned Wifi</h4>
+                      <div id= "scanWifi"></div><br><br>
+                      <h4>Connected Wifi</h4>
+                      <div id= "fetchWifi"></div>      
+                    </div>         
+              </div>
+            </div>
+          </div>      
     </div>
+    <script>
+        require('./design.js')
+    </script>
   </body>
 </html>
